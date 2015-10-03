@@ -1,0 +1,73 @@
+<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' 
+	width='100%' height='100%' viewPort='0 0 1000 1000'>
+	<defs>
+		<style>
+			.displace1, .displace2 {
+				animation-duration: 3s;
+				animation-iteration-count: infinite;
+				animation-timing-function: ease-in-out;
+			}
+			.displace1 {
+				animation-name: displace1;
+			}
+
+			.displace2 {
+				animation-name: displace2;
+			}
+
+			.rotation {
+				transform-origin: 50% 50%;
+				animation-duration: 3s;
+				animation-iteration-count: infinite;
+				animation-timing-function: ease-in-out;
+				animation-name: rotation;
+			}
+
+			@keyframes displace1 {
+				0% {
+					transform: translate3d(0, 0, 0);
+				}
+				50% {
+					transform: translate3d(24vw, 0, 0)
+				}
+				100% {
+					transform: translate3d(0, 0, 0)
+				}
+			}
+
+			@keyframes displace2 {
+				0% {
+					transform: translate3d(0, 0, 0);
+				}
+				50% {
+					transform: translate3d(-24vw, 0, 0)
+				}
+				100% {
+					transform: translate3d(0, 0, 0)
+				}
+			}
+
+			@keyframes rotation {
+				0% {
+					transform: rotate3d(0, 0, 1, 0deg);
+				}
+				50% {
+					transform: rotate3d(0, 0, 1, 180deg);
+				}
+				100% {
+					transform: rotate3d(0, 0, 1, 0deg);
+				}
+			}
+		</style>
+		<filter id="goo">
+      		<feGaussianBlur in="SourceGraphic" stdDeviation="15" result="blur" />
+      		<feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo" />
+      		<feComposite in="SourceGraphic" in2="goo" operator="atop"/>
+    	</filter>
+  	</defs>
+	<g filter="url(#goo)" class="rotation">
+		<circle cx="50%" cy="50%" r="5%" fill="black"/>
+		<circle cx="50%" cy="50%" r="5%" fill="black" class="displace1"></circle>
+		<circle cx="50%" cy="50%" r="5%" fill="black" class="displace2"></circle>
+	</g>
+</svg>

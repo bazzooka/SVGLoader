@@ -1,0 +1,94 @@
+<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' 
+	width='100%' height='100%' viewPort='0 0 1000 1000'>
+	<defs>
+		<style>
+			.contour {
+				transform-origin: 50% 350%;
+			}
+
+			.rot1 {
+				transform: translate3d(0, -300%, 0);
+			}
+
+			.rot2 {
+				transform: translate3d(0%, -300%, 0) rotate3d(0, 0, 1, 36deg);
+			}
+
+			.rot3 {
+				transform: translate3d(0%, -300%, 0) rotate3d(0, 0, 1, 72deg);
+			}
+
+			.rot4 {
+				transform: translate3d(0%, -300%, 0) rotate3d(0, 0, 1, 108deg);
+			}
+
+			.rot5 {
+				transform: translate3d(0%, -300%, 0) rotate3d(0, 0, 1, 144deg);
+			}
+
+			.rot6 {
+				transform: translate3d(0%, -300%, 0) rotate3d(0, 0, 1, 180deg);
+			}
+
+			.rot7 {
+				transform: translate3d(0%, -300%, 0) rotate3d(0, 0, 1, 216deg);
+			}
+
+			.rot8 {
+				transform: translate3d(0%, -300%, 0) rotate3d(0, 0, 1, 252deg);
+			}
+
+			.rot9 {
+				transform: translate3d(0%, -300%, 0) rotate3d(0, 0, 1, 288deg);
+			}
+
+			.rot10 {
+				transform: translate3d(0%, -300%, 0) rotate3d(0, 0, 1, 324deg);
+			}
+
+			.displace1 {
+				animation-duration: 3s;
+				animation-iteration-count: infinite;
+				animation-timing-function: ease;
+				animation-name: displace1;
+			}
+			
+			@keyframes displace1 {
+				0% {
+					transform: translate3d(0, -200%, 0);
+				}
+				25% {
+					transform: translate3d(0, 200%, 0)
+				}
+				50% {
+					transform: translate3d(-150%, 0, 0)
+				}
+				75% {
+					transform: translate3d(150%, 0, 0)
+				}
+				100% {
+					transform: translate3d(0, -200%, 0)
+				}
+			}
+		</style>
+		<filter id="goo">
+      		<feGaussianBlur in="SourceGraphic" stdDeviation="15" result="blur" />
+      		<feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo" />
+      		<feComposite in="SourceGraphic" in2="goo" operator="atop"/>
+    	</filter>
+  	</defs>
+	<g filter="url(#goo)" class="rotation">
+		<circle cx="50%" cy="50%" r="5.5%" fill="black" class="displace1"/>
+		<circle cx="50%" cy="50%" r="3.5%" fill="black" class="contour rot1"/>
+		<circle cx="50%" cy="50%" r="3.5%" fill="black" class="contour rot2"/>
+		<circle cx="50%" cy="50%" r="3.5%" fill="black" class="contour rot3"/>
+		<circle cx="50%" cy="50%" r="3.5%" fill="black" class="contour rot4"/>
+		<circle cx="50%" cy="50%" r="3.5%" fill="black" class="contour rot5"/>
+		<circle cx="50%" cy="50%" r="3.5%" fill="black" class="contour rot6"/>
+		<circle cx="50%" cy="50%" r="3.5%" fill="black" class="contour rot7"/>
+		<circle cx="50%" cy="50%" r="3.5%" fill="black" class="contour rot8"/>
+		<circle cx="50%" cy="50%" r="3.5%" fill="black" class="contour rot9"/>
+		<circle cx="50%" cy="50%" r="3.5%" fill="black" class="contour rot10"/>
+
+	</g>
+</svg>

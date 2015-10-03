@@ -1,0 +1,182 @@
+<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' 
+	width='100%' height='100%' viewPort='0 0 1000 1000'>
+	<defs>
+		<style>
+			.displ, .grow {
+				animation-duration: 4s;
+				animation-iteration-count: infinite;
+				animation-timing-function: ease;
+			}
+
+			.rot1 {
+				animation-name: displace1;
+			}
+
+			.rot2 {
+				animation-name: displace2;
+			}
+
+			.rot3 {
+				animation-name: displace3;
+			}
+
+			.grow {
+				transform-origin: 50% 50%;
+				animation-name: grow;
+			}
+
+			
+			@keyframes displace1 {
+				0% {
+					transform: translate3d(0, 0, 0);
+				}
+				12.5% {
+					transform: translate3d(50vw, 0, 0);
+				}
+				25% {
+					transform: translate3d(50vw, 0, 0);
+				}
+				37.5% {
+					transform: translate3d(50vw, 0, 0);
+				}
+				50% {
+					transform: translate3d(50vw, 0, 0);
+				}
+				62.5% {
+					transform: translate3d(107vw, 0, 0);
+				}
+				75% {
+					transform: translate3d(107vw, 0, 0);
+				}
+				87.5% {
+					transform: translate3d(107vw, 0, 0);
+				}
+				100% {
+					transform: translate3d(107vw, 0, 0);
+				}
+			}
+
+			@keyframes displace2 {
+				0% {
+					transform: translate3d(0, 0, 0);
+				}
+				12.5% {
+					transform: translate3d(0, 0, 0);
+				}
+				25% {
+					transform: translate3d(50vw, 0, 0);
+				}
+				37.5% {
+					transform: translate3d(50vw, 0, 0);
+				}
+				50% {
+					transform: translate3d(50vw, 0, 0);
+				}
+				62.5% {
+					transform: translate3d(50vw, 0, 0);
+				}
+				75% {
+					transform: translate3d(107vw, 0, 0);
+				}
+				87.5% {
+					transform: translate3d(107vw, 0, 0);
+				}
+				100% {
+					transform: translate3d(107vw, 0, 0);
+				}
+			}
+
+			@keyframes displace3 {
+				0% {
+					transform: translate3d(0, 0, 0);
+				}
+				12.5% {
+					transform: translate3d(0, 0, 0);
+				}
+				25% {
+					transform: translate3d(0, 0, 0);
+				}
+				37.5% {
+					transform: translate3d(50vw, 0, 0);
+				}
+				50% {
+					transform: translate3d(50vw, 0, 0);
+				}
+				62.5% {
+					transform: translate3d(50vw, 0, 0);
+				}
+				75% {
+					transform: translate3d(50vw, 0, 0);
+				}
+				87.5% {
+					transform: translate3d(107vw, 0, 0);
+				}
+				100% {
+					transform: translate3d(107vw, 0, 0);
+				}
+			}
+
+			@keyframes grow {
+				0% {
+					transform: scale(1);
+				}
+				9% {
+					transform: scale(1);
+				}
+				12.5% {
+					transform: scale(1.2);
+				}
+				22%{
+					transform: scale(1.2);
+				}
+				25% {
+					transform: scale(1.4);
+				}
+				34%{
+					transform: scale(1.4);
+				}
+				37.5% {
+					transform: scale(1.6);
+				}
+				50% {
+					transform: scale(1.6);
+				}
+				62.5% {
+					transform: scale(1.4);
+				}
+				75% {
+					transform: scale(1.2);
+				}
+				87.5% {
+					transform: scale(1.0);
+				}
+				100% {
+					transform: scale(1.0);
+				}
+			}
+		</style>
+		<filter id="shadowed-goo">
+			<feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10" />
+			<feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
+          	<feGaussianBlur in="goo" stdDeviation="3" result="shadow" />
+          	<feColorMatrix in="shadow" mode="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1 -0.2" result="shadow" />
+          	<feOffset in="shadow" dx="1" dy="1" result="shadow" />
+          	<feBlend in2="shadow" in="goo" result="goo" />
+          	<feBlend in2="goo" in="SourceGraphic" result="mix" />
+      	</filter>
+      	<filter id="goo">
+          <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10" />
+          <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
+          <feBlend in2="goo" in="SourceGraphic" result="mix" />
+      	</filter>
+  	</defs>
+  	<rect width="100%" height="100%" fill="#DCDCDC"/>
+	<g filter="url(#shadowed-goo)" class="rotation">
+		<circle cx="50%" cy="50%" r="5.5%" fill="white" filter="" class="grow"/>
+		<circle cx="-3%" cy="50%" r="3.0%" fill="white" class="displ rot1"/>
+		<circle cx="-3%" cy="50%" r="3.0%" fill="white" class="displ rot2"/>
+		<circle cx="-3%" cy="50%" r="3.0%" fill="white" class="displ rot3"/>
+
+
+	</g>
+</svg>
