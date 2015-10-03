@@ -58,16 +58,16 @@
 					transform: translate3d(0, -200%, 0);
 				}
 				25% {
-					transform: translate3d(0, 200%, 0)
+					transform: translate3d(0, 200%, 0);
 				}
 				50% {
-					transform: translate3d(-150%, 0, 0)
+					transform: translate3d(-150%, 0, 0);
 				}
 				75% {
-					transform: translate3d(150%, 0, 0)
+					transform: translate3d(150%, 0, 0);
 				}
 				100% {
-					transform: translate3d(0, -200%, 0)
+					transform: translate3d(0, -200%, 0);
 				}
 			}
 		</style>
@@ -77,18 +77,19 @@
       		<feComposite in="SourceGraphic" in2="goo" operator="atop"/>
     	</filter>
   	</defs>
+
 	<g filter="url(#goo)" class="rotation">
 		<circle cx="50%" cy="50%" r="5.5%" fill="black" class="displace1"/>
-		<circle cx="50%" cy="50%" r="3.5%" fill="black" class="contour rot1"/>
-		<circle cx="50%" cy="50%" r="3.5%" fill="black" class="contour rot2"/>
-		<circle cx="50%" cy="50%" r="3.5%" fill="black" class="contour rot3"/>
-		<circle cx="50%" cy="50%" r="3.5%" fill="black" class="contour rot4"/>
-		<circle cx="50%" cy="50%" r="3.5%" fill="black" class="contour rot5"/>
-		<circle cx="50%" cy="50%" r="3.5%" fill="black" class="contour rot6"/>
-		<circle cx="50%" cy="50%" r="3.5%" fill="black" class="contour rot7"/>
-		<circle cx="50%" cy="50%" r="3.5%" fill="black" class="contour rot8"/>
-		<circle cx="50%" cy="50%" r="3.5%" fill="black" class="contour rot9"/>
-		<circle cx="50%" cy="50%" r="3.5%" fill="black" class="contour rot10"/>
+		<circle cx="50%" cy="50%" r="3.5%" fill="black" class="contour rot1" />
+		<circle cx="50%" cy="50%" r="3.5%" fill="black" class="contour rot2" />
+		<circle cx="50%" cy="50%" r="3.5%" fill="black" class="contour rot3" />
+		<circle cx="50%" cy="50%" r="3.5%" fill="black" class="contour rot4" />
+		<circle cx="50%" cy="50%" r="3.5%" fill="black" class="contour rot5" />
+		<circle cx="50%" cy="50%" r="3.5%" fill="black" class="contour rot6" />
+		<circle cx="50%" cy="50%" r="3.5%" fill="black" class="contour rot7" />
+		<circle cx="50%" cy="50%" r="3.5%" fill="black" class="contour rot8" />
+		<circle cx="50%" cy="50%" r="3.5%" fill="black" class="contour rot9" />
+		<circle cx="50%" cy="50%" r="3.5%" fill="black" class="contour rot10" />
 
 	</g>
 </svg>
